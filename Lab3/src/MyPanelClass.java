@@ -59,6 +59,28 @@ public class MyPanelClass extends JPanel {
 //        g.setColor(Color.YELLOW);
 //        g.fillPolygon(p);
 		
+		
+		//Drawing PR Flag
+		
+		//drawing the red and white rectangles
+		g.setColor(Color.RED);
+		g.fillRect(x1, y1, 280, 36);
+		g.fillRect(x1, y1+72, 280, 36);
+		g.fillRect(x1, y1+144, 280, 36);
+		
+		g.setColor(Color.WHITE);
+		g.fillRect(x1, y1+36, 280, 36);
+		g.fillRect(x1, y1+108, 280, 36);
+		
+		//Draw blue triangle
+		Polygon tri = new Polygon();
+		tri.addPoint(x1, y1);
+		tri.addPoint(x1+140, y1+90);
+		tri.addPoint(x1, y1+180);
+		tri.addPoint(x1, y1);
+		g.setColor(Color.BLUE);
+		g.fillPolygon(tri);
+		
 		Polygon p2 = new Polygon();
         p2.addPoint(x1 + 25, y1 + 73);
         p2.addPoint(x1 + 41, y1 + 73);
@@ -71,7 +93,7 @@ public class MyPanelClass extends JPanel {
         p2.addPoint(x1 + 34, y1 + 98);
         p2.addPoint(x1 + 38, y1 + 83);
         g.setColor(Color.WHITE);
-        g.drawPolygon(p2);
+        g.fillPolygon(p2);
         
 		
 	}
